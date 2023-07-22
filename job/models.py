@@ -9,6 +9,21 @@ django model field:
 - db size
 '''
 
+JOB_TYPE = (
+    ('Full Time', 'full time'),
+    ('Part Time', 'Part time'),
+)
+
 
 class Job(models.Model):   # table
     title = models.CharField(max_length=10)  # column
+    # location
+    job_type = models.CharField(max_length=15, choices=JOB_TYPE)
+    description = models.TextField(max_length=1000)
+    published_at = models.DateTimeField(auto_now=True)
+    Vacancy = models.IntegerField(default=1)
+    salary = models.IntegerField(default=0)
+    experience = models.IntegerField(default=1)
+
+    def __str__(self):
+        return self.title
