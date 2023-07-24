@@ -116,16 +116,7 @@
               <div class="col-md-6">
                 <h4>Job Listing</h4>
               </div>
-              <div class="col-md-6">
-                <div class="serch_cat d-flex justify-content-end">
-                  <select>
-                    <option data-display="Most Recent">Most Recent</option>
-                    <option value="1">Marketer</option>
-                    <option value="2">Wordpress</option>
-                    <option value="4">Designer</option>
-                  </select>
-                </div>
-              </div>
+              <div class="col-md-6"></div>
             </div>
           </div>
         </div>
@@ -140,7 +131,7 @@
                     <img src="{{job.image.url}}" alt="" />
                   </div>
                   <div class="jobs_conetent">
-                    <a href="{% url 'jobs:job_detail' job.id %}"
+                    <a href="{% url 'jobs:job_detail' job.slug %}"
                       ><h4>{{job}}</h4></a
                     >
                     <div class="links_locat d-flex align-items-center">
@@ -159,7 +150,7 @@
                       <i class="fa fa-heart"></i>
                     </a>
                     <a
-                      href="{% url 'jobs:job_detail' job.id %}"
+                      href="{% url 'jobs:job_detail' job.slug %}"
                       class="boxed-btn3"
                       >Apply Now</a
                     >
