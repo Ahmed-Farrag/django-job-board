@@ -11,7 +11,7 @@ JOB_TYPE = (
 
 def image_upload(instance, filename):
     imagename, extension = filename.split(".")
-    return "jobs/%s/%s.%s" % (instance.id, instance.id, extension)
+    return "jobs/%s.%s" % (instance.slug, extension)
 
 
 class Job(models.Model):   # table
